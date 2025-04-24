@@ -3,31 +3,45 @@
 #include <iostream>
 #include <string>
 
-
 using namespace std;
 
-
 int main() {
-	string n;
+    string n;
 
-	// Title screan
-	title();
+    while (true) {
+        // Title screen
+        system("cls");
+        title();
 
-	// Options
-	options();
+        // Options
+        options();
 
-	// Input
-	input();
-	cin >> n;
+        // Input
+        input();
+        cin >> n;
 
-	startGame(n);
+        if (n == "Quit") {
+            exitMessage();
+            break;
+        }
 
-	gotoInventory(n);
+        startGame(n);
 
+        if (n == "Quit") {
+            exitMessage();
+            break;
+        }
 
+        gotoInventory(n);
 
+        if (n == "Quit") {
+            exitMessage();
+            break;
+        }
+    }
 
-	return 0;
+    return 0;
 }
+
 
 

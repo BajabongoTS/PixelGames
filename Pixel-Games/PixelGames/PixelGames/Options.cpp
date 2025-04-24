@@ -1,6 +1,7 @@
 #include "Options.h"
 #include "text.h"
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -18,23 +19,69 @@ void startGame(string& n) {
 
 // Inventory
 
+//void gotoInventory(string& n) {
+//    if (n == "Inventory") {
+//        system("cls");
+//
+//        // Wiew inventory
+//        viewArmor();
+//
+//
+//        Options_of_Wepons_or_PasiweItem();
+//        
+//
+//        choseOption(n);
+//        
+//
+//        goback(n);
+//
+//
+//        gameLoop(n);
+//        if (n == "Quit") {
+//            exitMessage();
+//        }
+//    }
+//}
+
 void gotoInventory(string& n) {
     if (n == "Inventory") {
-        // Wiew inventory
-        viewArmor();
+        while (true) {
+            system("cls");
 
-        Options_of_Wepons_or_PasiweItem();
+            viewArmor();
+            Options_of_Wepons_or_PasiweItem();
+            choseOption(n);
 
-        choseOption(n);
+            if (n == "back") {
+                system("cls");
+                title();
+                options();
+                return; 
+            }
 
-        goback(n);
+            goback(n);
 
-        gameLoop(n);
-        if (n == "Quit") {
-            exitMessage();
+            if (n == "back") {
+                system("cls");
+                title();
+                options();
+                return;
+            }
+
+            if (n == "no") {
+                break;
+            }
+
+            gameLoop(n);
+            if (n == "Quit") {
+                exitMessage();
+                break;
+            }
         }
     }
 }
+
+
 
 
 void choseOption(string& n) {
@@ -46,19 +93,33 @@ void choseOption(string& n) {
         cin >> n;
 
         if (n == "Wepons") {
+            system("cls");
             AsciiWeapons::viewWeapon(AsciiWeapons::sword);
             validOption = true;
         }
         else if (n == "PasiweItems") {
+            system("cls");
             AsciiWeapons::viewPasiweItem(AsciiWeapons::shields);
             validOption = true;
         }
+        else if (n == "Change Wepon") {
+            WeponsChange();
+        }
+        else if (n == "back") {
+            system("cls");
+            title();
+            options();
+            return;
+        }
+
         else {
             cout << "Option not found. Try again." << endl;
         }
     }
 }
+void WeponsChange() {
 
+}
 
 // Dla obu 
 
@@ -69,6 +130,12 @@ void goback(string& n) {
         cin >> n;
 
         if (n == "back") {
+            system("cls");
+
+            viewArmor();
+
+            Options_of_Wepons_or_PasiweItem();
+
             choseOption(n);
         }
 
