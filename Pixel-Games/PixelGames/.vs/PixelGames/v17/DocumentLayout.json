@@ -1,21 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\konra\\Desktop\\ProjektPP\\Pixel-Games\\PixelGames\\",
+  "WorkspaceRootPath": "C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|C:\\Users\\konra\\Desktop\\ProjektPP\\Pixel-Games\\PixelGames\\PixelGames\\Options.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|solutionrelative:PixelGames\\Options.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|C:\\Users\\konra\\Desktop\\ProjektPP\\Pixel-Games\\PixelGames\\PixelGames\\Options.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|solutionrelative:PixelGames\\Options.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|C:\\Users\\konra\\Desktop\\ProjektPP\\Pixel-Games\\PixelGames\\PixelGames\\text.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\text.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|solutionrelative:PixelGames\\text.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|C:\\Users\\konra\\Desktop\\ProjektPP\\Pixel-Games\\PixelGames\\PixelGames\\PixelGames.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\Options.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|solutionrelative:PixelGames\\Options.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\text.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|solutionrelative:PixelGames\\text.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\Options.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|solutionrelative:PixelGames\\Options.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\PixelGames.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{AAB02FA0-33F5-4E19-9437-B2E235A50CD7}|PixelGames\\PixelGames.vcxproj|solutionrelative:PixelGames\\PixelGames.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -30,52 +34,65 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "text.h",
+              "DocumentMoniker": "C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\text.h",
+              "RelativeDocumentMoniker": "PixelGames\\text.h",
+              "ToolTip": "C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\text.h",
+              "RelativeToolTip": "PixelGames\\text.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-25T07:47:34.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Options.h",
-              "DocumentMoniker": "C:\\Users\\konra\\Desktop\\ProjektPP\\Pixel-Games\\PixelGames\\PixelGames\\Options.h",
+              "DocumentMoniker": "C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\Options.h",
               "RelativeDocumentMoniker": "PixelGames\\Options.h",
-              "ToolTip": "C:\\Users\\konra\\Desktop\\ProjektPP\\Pixel-Games\\PixelGames\\PixelGames\\Options.h*",
-              "RelativeToolTip": "PixelGames\\Options.h*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\Options.h",
+              "RelativeToolTip": "PixelGames\\Options.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-24T15:36:47.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "text.cpp",
-              "DocumentMoniker": "C:\\Users\\konra\\Desktop\\ProjektPP\\Pixel-Games\\PixelGames\\PixelGames\\text.cpp",
+              "DocumentMoniker": "C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\text.cpp",
               "RelativeDocumentMoniker": "PixelGames\\text.cpp",
-              "ToolTip": "C:\\Users\\konra\\Desktop\\ProjektPP\\Pixel-Games\\PixelGames\\PixelGames\\text.cpp",
+              "ToolTip": "C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\text.cpp",
               "RelativeToolTip": "PixelGames\\text.cpp",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAFwAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-24T15:36:14.508Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Options.cpp",
-              "DocumentMoniker": "C:\\Users\\konra\\Desktop\\ProjektPP\\Pixel-Games\\PixelGames\\PixelGames\\Options.cpp",
+              "DocumentMoniker": "C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\Options.cpp",
               "RelativeDocumentMoniker": "PixelGames\\Options.cpp",
-              "ToolTip": "C:\\Users\\konra\\Desktop\\ProjektPP\\Pixel-Games\\PixelGames\\PixelGames\\Options.cpp",
+              "ToolTip": "C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\Options.cpp",
               "RelativeToolTip": "PixelGames\\Options.cpp",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAAIgAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAuwEQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-24T15:36:01.363Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PixelGames.cpp",
-              "DocumentMoniker": "C:\\Users\\konra\\Desktop\\ProjektPP\\Pixel-Games\\PixelGames\\PixelGames\\PixelGames.cpp",
+              "DocumentMoniker": "C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\PixelGames.cpp",
               "RelativeDocumentMoniker": "PixelGames\\PixelGames.cpp",
-              "ToolTip": "C:\\Users\\konra\\Desktop\\ProjektPP\\Pixel-Games\\PixelGames\\PixelGames\\PixelGames.cpp",
+              "ToolTip": "C:\\Users\\KonradKlautzsch\\Desktop\\PixelGames\\Pixel-Games\\PixelGames\\PixelGames\\PixelGames.cpp",
               "RelativeToolTip": "PixelGames\\PixelGames.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-24T15:30:02.787Z",
               "EditorCaption": ""

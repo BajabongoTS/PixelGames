@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Pixel-Games",
+    "\\Pixel-Games\\PixelGames",
+    "\\Pixel-Games\\PixelGames\\PixelGames"
   ],
+  "SelectedNode": "\\Pixel-Games\\PixelGames\\PixelGames\\Options.cpp",
   "PreviewInSolutionExplorer": false
 }

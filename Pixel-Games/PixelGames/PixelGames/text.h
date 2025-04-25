@@ -2,6 +2,8 @@
 #include <vector>
 #include <string>
 
+extern std::string items;
+
 void title();
 
 void options();

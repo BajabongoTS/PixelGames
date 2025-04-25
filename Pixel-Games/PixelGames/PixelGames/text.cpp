@@ -1,11 +1,13 @@
 #include "text.h"
-
 #include <string>
 #include <iostream>
 #include <ostream>
 #include <vector>
+#include "Options.h"
 
 using namespace std;
+
+std::string items = "                                                                          |                       ";
 
 void title() {
     cout << endl;
@@ -111,11 +113,11 @@ void viewArmor() {
                                                                           |_____________________________________________________________|.
                                                                           |                              |                              |.
                                                                           |                              |                              |.)" << endl;
-    cout << item3 << "       | "                        "                             |." << endl;
+    cout << items << "       | "                        "                             |." << endl;
     cout << R"(                                                                          |                              |                              |.
                                                                           |______________________________|______________________________|____
                                                                           |   /                                                             /.
-                                                                          \_ /dc___________________________________________________________/.)";
+                                                                          \_ /dc___________________________________________________________/.)" << endl;
 
 }
 
