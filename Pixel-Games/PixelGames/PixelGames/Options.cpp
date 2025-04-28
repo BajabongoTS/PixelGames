@@ -70,6 +70,14 @@ void choseOption(string& n) {
             viewArmor();
             Options_of_Wepons_or_PasiweItem();
         }
+        else if (n == "ChangePasiwe") {
+            int id;
+            cin >> id;
+            PasiweItemChange(id);
+            system("cls");
+            viewArmor();
+            Options_of_Wepons_or_PasiweItem();
+        }
         else if (n == "back") {
             system("cls");
             title();
@@ -127,17 +135,23 @@ void exitMessage() {
 
 void WeponChange(int id) {
 
-    string item1 = R"(                                                                          |       /                      |                              |.
-                                                                          |   O===[==================-   |                              |.
-                                                                          |       \               )";
+    string item1 = R"(                                                                          |                           
+                                                                          |       /                   
+                                                                          |   O===[==================-
+                                                                          |       \                   
+                                                                          |                           )";
 
-    string item2 = R"(                                                                          |      /\                      |                              |.
-                                                                          |   |####==================-   |                              |.
-                                                                          |      \/               )";
+    string item2 = R"(                                                                          |                           
+                                                                          |      /\                   
+                                                                          |   |####==================-
+                                                                          |      \/                   
+                                                                          |                           )";
 
-    string item3 = R"(                                                                          |                  \---/       |                              |.
-                                                                          |      o================>      |                              |.
-                                                                          |                  /___\)";
+    string item3 = R"(                                                                          |                           
+                                                                          |                  \---/    
+                                                                          |      o================>   
+                                                                          |                  /___\    
+                                                                          |                           )";
 
     if (id == 1) {
         items = item1;
@@ -147,5 +161,36 @@ void WeponChange(int id) {
     }
     else if (id == 3) {
         items = item3;
+    }
+}
+
+void PasiweItemChange(int id) {
+
+    string item1 = R"(|          |--------|          |.
+|          |   ||   |          |.   
+|          \===[]===/          |.   
+|           \  ||  /           |.   
+|            ------            |.)";
+
+    string item2 = R"(                                                                          |                           
+                                                                          |      /\                   
+                                                                          |   |####==================-
+                                                                          |      \/                   
+                                                                          |                           )";
+
+    string item3 = R"(                                                                          |                           
+                                                                          |                  \---/    
+                                                                          |      o================>   
+                                                                          |                  /___\    
+                                                                          |                           )";
+
+    if (id == 1) {
+        pasiws = item1;
+    }
+    else if (id == 2) {
+        pasiws = item2;
+    }
+    else if (id == 3) {
+        pasiws = item3;
     }
 }

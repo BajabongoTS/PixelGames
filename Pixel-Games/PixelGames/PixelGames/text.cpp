@@ -1,13 +1,26 @@
 #include "text.h"
-#include <string>
 #include <iostream>
-#include <ostream>
+#include <sstream>
+#include <string>
 #include <vector>
+#include <algorithm>
 #include "Options.h"
 
 using namespace std;
 
-std::string items = "                                                                          |                       ";
+std::string items = R"(                                                                          |                           
+                                                                          |                           
+                                                                          |                           
+                                                                          |                           
+                                                                          |                           )";
+std::string pasiws = R"(|                              |.
+|                              |.
+|                              |.
+|                              |.
+|                              |.)";
+
+
+
 
 void title() {
     cout << endl;
@@ -62,9 +75,11 @@ void input() {
 
 void viewArmor() {
 
-    string item1 = R"(                                                                          |       /                      |                              |.
-                                                                          |   O===[==================-   |                              |.
-                                                                          |       \               )";
+    string item1 = R"(                                                    |           |--------|           |.
+                                                                          |           |   ||   |           |.
+                                                                          |           \===[]===/           |.
+                                                                          |            \  ||  /            |.
+                                                                          |             ------             |.)";
 
     string item2 = R"(                                                                          |      /\                      |                              |.
                                                                           |   |####==================-   |                              |.
@@ -111,11 +126,11 @@ void viewArmor() {
                                                                           |                                                             |.
                                                                           |                                                             |.
                                                                           |_____________________________________________________________|.
-                                                                          |                              |                              |.
                                                                           |                              |                              |.)" << endl;
-    cout << items << "       | "                        "                             |." << endl;
-    cout << R"(                                                                          |                              |                              |.
-                                                                          |______________________________|______________________________|____
+
+    showItemsAndPasiws();
+
+cout << R"(                                                                          |______________________________|______________________________|____
                                                                           |   /                                                             /.
                                                                           \_ /dc___________________________________________________________/.)" << endl;
 
@@ -299,5 +314,43 @@ namespace AsciiWeapons {
         for (const auto& linia : pasiws) {
             cout << linia << endl;
         }
+    }
+}
+
+void showItemsAndPasiws() {
+    vector<string> lines_items;
+    vector<string> lines_pasiws;
+
+    stringstream ss_items(items);
+    stringstream ss_pasiws(pasiws);
+
+    string line;
+
+    while (getline(ss_items, line)) {
+        lines_items.push_back(line);
+    }
+
+    while (getline(ss_pasiws, line)) {
+        lines_pasiws.push_back(line);
+    }
+
+
+    size_t max_lines = max(lines_items.size(), lines_pasiws.size());
+
+    for (size_t i = 0; i < max_lines; ++i) {
+        if (i < lines_items.size()) {
+            cout << lines_items[i];
+        }
+        else {
+            cout << string(74, ' ');
+        }
+
+        cout << "   ";
+
+        if (i < lines_pasiws.size()) {
+            cout << lines_pasiws[i];
+        }
+
+        cout << endl;
     }
 }
