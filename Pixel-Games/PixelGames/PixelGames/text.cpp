@@ -1,10 +1,13 @@
-#include "text.h"
+ï»¿#include "text.h"
 #include <iostream>
 #include <sstream>
 #include <string>
 #include <vector>
 #include <algorithm>
 #include "Options.h"
+#include <thread>
+#include <chrono>
+#include <atomic>
 
 using namespace std;
 
@@ -19,6 +22,9 @@ std::string pasiws = R"(|                              |.
 |                              |.
 |                              |.)";
 
+int hp = 100;
+
+int mana = 100;
 
 
 
@@ -96,9 +102,9 @@ void viewArmor() {
     cout << R"(                                                                         _______________________________________________________________
                                                                         /  \                             |                              \.
                                                                        |  |              Hp:             |             Mana:            |.
-                                                                        \_|    +--------------------+    |    +--------------------+    |.
-                                                                          |    |#########100########|    |    |#########100########|    |.
-                                                                          |    +--------------------+    |    +--------------------+    |.
+                                                                        \_|    +--------------------+    |    +--------------------+    |.)" << endl;
+    cout << "                                                                          |    |#########" << hp << "########|    |    |#########" << mana << "########|    |." << endl;
+    cout << R"(                                                                          |    +--------------------+    |    +--------------------+    | .
                                                                           |                              |                              |.
                                                                           |______________________________|______________________________|.
                                                                           |                                                             |.
@@ -204,13 +210,13 @@ namespace AsciiWeapons {
     |       [########[]_________________________________>       |
     |                \>                                         |
     |                                                           |
-    |  Obra¿enia:                                               |
+    |  ObraÅ¼enia:                                               |
     |  30                                                       |
     |                                                           |
-    |  Umiejêtnoœæ:                                             |
-    |  cena 30 punktów many                                     |
-    |  Zadaje dodatkowe 10 obra¿eñ i blokuje na 1 rundê         |
-    |  umiejêtnoœæ wroga.                                       |
+    |  UmiejÄ™tnoÅ›Ä‡:                                             |
+    |  cena 30 punktÃ³w many                                     |
+    |  Zadaje dodatkowe 10 obraÅ¼eÅ„ i blokuje na 1 rundÄ™         |
+    |  umiejÄ™tnoÅ›Ä‡ wroga.                                       |
     |                                                           |
     +-----------------------------------------------------------+     
              
@@ -219,13 +225,13 @@ namespace AsciiWeapons {
     |                                                           |  
     |        ,  /\  .                                           |
     |       //`-||-'\\                                          |
-    |      (| -=||=- |)         Obra¿enia:                      |
+    |      (| -=||=- |)         ObraÅ¼enia:                      |
     |       \\,-||-.//          20                              |
     |        `  ||  '                                           |
-    |           ||              Umiejêtnoœæ:                    |
-    |           ||              cena 50 punktów many            |
-    |           ||              Zadaje krytyczny cos który      |
-    |           ||              zada 30 obra¿eñ                 |
+    |           ||              UmiejÄ™tnoÅ›Ä‡:                    |
+    |           ||              cena 50 punktÃ³w many            |
+    |           ||              Zadaje krytyczny cos ktÃ³ry      |
+    |           ||              zada 30 obraÅ¼eÅ„                 |
     |           ||                                              |
     |           ()                                              |
     |                                                           |
@@ -241,13 +247,13 @@ namespace AsciiWeapons {
     |               \/                                          |
     |                                                           |
     |                                                           |
-    |  Obra¿enia:                                               |
+    |  ObraÅ¼enia:                                               |
     |  20                                                       |
     |                                                           |
-    |  Umiejêtnoœæ:                                             |
-    |  cena 60 punktów many                                     |
-    |  Nak³ada krwawienie na przeciwnika przez co kolejne 3     |
-    |  rundy dostaje 10 obra¿eñ                                 |
+    |  UmiejÄ™tnoÅ›Ä‡:                                             |
+    |  cena 60 punktÃ³w many                                     |
+    |  NakÅ‚ada krwawienie na przeciwnika przez co kolejne 3     |
+    |  rundy dostaje 10 obraÅ¼eÅ„                                 |
     |                                                           |
     +-----------------------------------------------------------+   
     )"
@@ -268,8 +274,8 @@ namespace AsciiWeapons {
     |        ||####|(__)||        Hroni:                        |
     |        ((####|(**)))        50                            |
     |         '\###|_''/'                                       |
-    |          \\()|##//          Pasywna Umiejêtnoœæ:          |
-    |           \\ |#//           Dodaje 20 do maksymalnego     |
+    |          \\()|##//          Pasywna UmiejÄ™tnoÅ›Ä‡:          |
+    |           \\ |#//           Dodaje 30 do maksymalnego     |
     |            .\_/.            zdrowia.                      |
     |             L.J                                           |
     |              "                                            |
@@ -283,7 +289,7 @@ namespace AsciiWeapons {
     |       |    ||    |           Hroni:                       |
     |       |___o()o___|           65                           |
     |       |__((<>))__|                                        |
-    |       \   o\/o   /           Pasywna Umiejêtnoœæ:         |
+    |       \   o\/o   /           Pasywna UmiejÄ™tnoÅ›Ä‡:         |
     |        \   ||   /            Dodaje do zdrowia 15 i do    |
     |         \  ||  /             many 15                      |
     |          '.||.'                                           |
@@ -299,9 +305,9 @@ namespace AsciiWeapons {
     |          )##########(        Hroni:                       |
     |       ._/##.'//\\'.##\_.     50                           |
     |        .__)#((()))#(__.                                   |
-    |         \##'.\\//.'##/       Pasywna Umiejêtnoœæ:         |
-    |          \####\/####/        Dodaje 20 do maksymalnej     |
-    |          /,.######.,\        iloœci many                  |
+    |         \##'.\\//.'##/       Pasywna UmiejÄ™tnoÅ›Ä‡:         |
+    |          \####\/####/        Dodaje 30 do maksymalnej     |
+    |          /,.######.,\        iloÅ›ci many                  |
     |         (  \##__##/  )                                    |
     |             "(\/)'                                        |
     |               )(|                                         |
@@ -353,4 +359,92 @@ void showItemsAndPasiws() {
 
         cout << endl;
     }
+}
+
+void LevelFunction(atomic<bool>& running) {
+    for (int i = 0; i < 21; ++i) cout << endl;
+
+    cout << R"(
+                                                                                   __                              ___          _     
+                                                                                  /\ \                            /\_ \       /' \    
+                                                                                  \ \ \         __   __  __     __\//\ \     /\_, \   
+                                                                                   \ \ \  __  /'__`\/\ \/\ \  /'__`\\ \ \    \/_/\ \  
+                                                                                    \ \ \L\ \/\  __/\ \ \_/ |/\  __/ \_\ \_     \ \ \ 
+                                                                                     \ \____/\ \____\\ \___/ \ \____\/\____\     \ \_\
+                                                                                      \/___/  \/____/ \/__/   \/____/\/____/      \/_/
+)";
+this_thread::sleep_for(chrono::milliseconds(100)); // interwaÅ‚
+}
+
+void LevelView() {
+    atomic<bool> running{ true };
+    thread worker(LevelFunction, ref(running));
+
+    this_thread::sleep_for(chrono::seconds(3)); // czas trwania
+    running = false;
+
+    worker.join();
+}
+
+void View_of_fight() {
+    cout << R"(
+             _________________________________________________________________________________________________________________________________________________________________________________________
+            / \                                                                                                                                                                                        \.
+           |   |                                                                                                                                                                                       |.
+            \_ |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |                                                                                                                                                                                       |.
+               |_______________________________________________________________________________________________________________________________________________________________________________________|____
+               |   /                                                                                                                                                                                       /.
+               \_ /dc_____________________________________________________________________________________________________________________________________________________________________________________/.
+)" << endl;
+}
+
+void View_fight_options() {
+    cout << R"(                                   _____                      _____       _____                    _____       _____                       _____       _____                 _____
+                                  ( ___ )--------------------( ___ )     ( ___ )------------------( ___ )     ( ___ )---------------------( ___ )     ( ___ )---------------( ___ )  
+                                   |   |                      |   |       |   |                    |   |       |   |                       |   |       |   |                 |   |
+                                   |   |    Normal Attack     |   |       |   |    Super Attack    |   |       |   |    Use Pasiwe Item    |   |       |   |    End Round    |   |
+                                   |___|                      |___|       |___|                    |___|       |___|                       |___|       |___|                 |___|
+                                  (_____)--------------------(_____)     (_____)------------------(_____)     (_____)---------------------(_____)     (_____)---------------(_____)    
+    )";
+    cout << endl;
 }

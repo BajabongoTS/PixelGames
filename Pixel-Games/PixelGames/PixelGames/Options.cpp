@@ -11,6 +11,15 @@ using namespace std;
 
 void startGame(string& n) {
     if (n == "Play") {
+        system("cls");
+
+        LevelView();
+        system("cls");
+        
+        View_of_fight();
+
+        View_fight_options();
+
         gameLoop(n);
         if (n == "Quit") {
             exitMessage();
@@ -166,31 +175,41 @@ void WeponChange(int id) {
 
 void PasiweItemChange(int id) {
 
-    string item1 = R"(|          |--------|          |.
+    string item3 = R"(|          |\_.--._/|          |.
+|          /###/\###\          |.   
+|          \##(())##/          |.   
+|         (`\##\/##/`)         |.   
+|            -\__/-            |.)";
+
+    string item2 = R"(|          |--------|          |.
 |          |   ||   |          |.   
 |          \===[]===/          |.   
 |           \  ||  /           |.   
 |            ------            |.)";
 
-    string item2 = R"(                                                                          |                           
-                                                                          |      /\                   
-                                                                          |   |####==================-
-                                                                          |      \/                   
-                                                                          |                           )";
-
-    string item3 = R"(                                                                          |                           
-                                                                          |                  \---/    
-                                                                          |      o================>   
-                                                                          |                  /___\    
-                                                                          |                           )";
+    string item1 = R"(|          /---------\         |.
+|          \####|(_*)/         |.   
+|           \###|(_'/          |.   
+|            \()|##/           |.   
+|             -----            |.)";
 
     if (id == 1) {
         pasiws = item1;
+        hp = 100;
+        mana = 100;
+        hp = hp + 30;
     }
     else if (id == 2) {
         pasiws = item2;
+        hp = 100;
+        mana = 100;
+        hp = hp + 15;
+        mana =mana + 15;
     }
     else if (id == 3) {
         pasiws = item3;
+        hp = 100;
+        mana = 100;
+        mana = mana + 30;
     }
 }
